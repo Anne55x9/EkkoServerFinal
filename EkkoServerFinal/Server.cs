@@ -39,6 +39,15 @@ namespace EkkoServerFinal
                 Console.WriteLine("Server modtaget : " + inlinje);
                 sw.WriteLine(inlinje);
 
+                //Tæller antal bogstaver inklusiv mellemrum.
+
+                int numberOfLetters = inlinje.Length;
+                Console.WriteLine(numberOfLetters);
+
+                //Tæller antal ord i en sætning.
+
+                int numberOfNew = inlinje.Split().Length;
+                Console.WriteLine(numberOfNew);
                 
 
                 // Flush tømmer det serveren har og sender ud til forbindelse. 
