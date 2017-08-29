@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E1A12FB9-2CAF-4FE1-BBED-6834CCFE1943}</ProjectGuid>
+    <ProjectGuid>{7600CD69-4A1A-4917-9A10-A20951ABAE47}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>EkkoServerFinal</RootNamespace>
-    <AssemblyName>EkkoServerFinal</AssemblyName>
+    <RootNamespace>ServerClient</RootNamespace>
+    <AssemblyName>ServerClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
