@@ -35,25 +35,29 @@ namespace EkkoServerFinal
             {
                 // denne del adskiller vores ekko server fra en almindelig webserver.
 
-                string inlinje = sr.ReadLine();
-                Console.WriteLine("Server modtaget : " + inlinje);
-                sw.WriteLine(inlinje);
+                while (true)
+                {
+                    string inlinje = sr.ReadLine();
+                    Console.WriteLine("Server modtaget : " + inlinje);
+                    sw.WriteLine(inlinje.ToUpper());
 
-                //Tæller antal bogstaver inklusiv mellemrum.
+                    //Tæller antal bogstaver inklusiv mellemrum.
 
-                int numberOfLetters = inlinje.Length;
-                Console.WriteLine(numberOfLetters);
+                    int numberOfLetters = inlinje.Length;
+                    Console.WriteLine(numberOfLetters);
 
-                //Tæller antal ord i en sætning.
+                    //Tæller antal ord i en sætning.
 
-                int numberOfNew = inlinje.Split().Length;
-                Console.WriteLine(numberOfNew);
+                    int numberOfNew = inlinje.Split().Length;
+                    Console.WriteLine(numberOfNew);
+
+
+                    // Flush tømmer det serveren har og sender ud til forbindelse. 
+                    sw.Flush();
+                }
                 
 
-                // Flush tømmer det serveren har og sender ud til forbindelse. 
-                sw.Flush();
-
-                Console.ReadLine();
+                //Console.ReadLine();
             }
 
         }
